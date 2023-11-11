@@ -2,18 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { MantineProvider } from "@mantine/core";
+import { routes } from "./routes";
 
-import MainPage from "./pages/MainPage.tsx";
+import { MantineProvider } from "@mantine/core";
 
 import "@mantine/core/styles.css";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <MainPage />,
-  },
-]);
+const router = createBrowserRouter(routes);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
