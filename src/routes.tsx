@@ -14,7 +14,13 @@ export const routes = [
     children: [
       {
         path: "/async-select-practice/smartphones",
+        element: <AsyncSelectPracticePage />,
         id: "item 1",
+      },
+      {
+        path: "/async-select-practice/laptops",
+        element: <AsyncSelectPracticePage />,
+        id: "item 2",
       },
     ],
   },
