@@ -1,15 +1,22 @@
-import { Link } from "react-router-dom";
+import { ReactNode } from "react";
+import { Link, RouteObject } from "react-router-dom";
 
 import { NavLink } from "@mantine/core";
+import { routes } from "../../routes";
 
 export default function Nav() {
-  return (
-    <NavLink label="Filter Practice" childrenOffset={28}>
+  const generateLinks = (routes: RouteObject[]): ReactNode => {
+    return routes.map((route) => (
       <NavLink
         component={Link}
-        to="/async-select-practice"
-        label="Async Select"
-      />
-    </NavLink>
-  );
+        key={route.path}
+        label={route.id}
+        to={route.path!}
+      >
+        {route.children && generateLinks(route.children)}
+      </NavLink>
+    ));
+  };
+
+  return <>{generateLinks(routes)}</>;
 }
