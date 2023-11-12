@@ -1,5 +1,6 @@
 import MainPage from "./pages/MainPage";
 import AsyncSelectPracticePage from "./pages/AsyncSelectPracticePage";
+import ReactPdfPracticePage from "./pages/ReactPdfPracticePage";
 
 export const routes = [
   {
@@ -23,5 +24,10 @@ export const routes = [
         id: "item 2",
       },
     ],
+  },
+  {
+    path: "/react-pdf-practice",
+    id: "React PDF Practice",
+    element: <ReactPdfPracticePage />,
   },
 ];
