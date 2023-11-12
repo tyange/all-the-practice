@@ -270,6 +270,7 @@ export default function PdfPreview() {
                   fontFamily: "Helvetica-Bold",
                   fontSize: 12,
                   marginTop: 2,
+                  height: 150,
                 }}
               >
                 Free Text

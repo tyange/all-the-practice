@@ -16,7 +16,7 @@ export default function ReactPdfPracticePage() {
     <Layout>
       <div className={classes.wrapper}>
         <div>
-          <button onClick={toggleNewWindow}>download</button>
+          <button onClick={toggleNewWindow}>Preview</button>
         </div>
         {isNewWindowOpen && <PdfPreview />}
       </div>
